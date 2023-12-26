@@ -1,0 +1,69 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: #0e153a; /* Dark blue space-like background */
+    color: #ffffff; /* White text for better contrast */
+}
+
+.game-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, auto); /* Allows the cards to size better */
+    gap: 16px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    position: relative;
+    width: 100px; /* Set a fixed width */
+    height: 150px; /* Set a height with a good aspect ratio */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card img {
+    width: 100%; /* Stretch image to full width */
+    height: 100%; /* Stretch image to full height */
+    object-fit: cover; /* Ensure the image covers the card */
+    border-radius: 10px;
+}
+
+#gameResult {
+    font-size: 24px;
+    color: #f0f0f0; /* Light color for the result message */
+    display: none; /* Hide initially */
+    margin-top: 20px;
+}
+
+#newGameButton {
+    display: none; /* Hide initially */
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #22a7f0; /* Bright blue for the button */
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* Adjust the width of the cards responsively if needed */
+@media (max-width: 600px) {
+    .game-board {
+        grid-template-columns: repeat(2, auto); /* Stack cards into 2 columns on smaller screens */
+    }
+}
